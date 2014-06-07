@@ -11,7 +11,7 @@ The subject and activity names in tidy data is named below:
 * activityName:  Six class labels with their activity names ("Walking,Walking_Upstairs,Walking_Downstairs,Sitting,Standing,Laying")
 
 ##Combining the test data and the training data together
-Since the test data,the training data, the participant ID and acitivityNumber(stored in _"subject_ _train"_and_"y_ _train_",respectively for train data and _"subject_ _test"_and_"x_ _train"_respectively for test data) are separated into two different files in the original files, which are named as _"X_ _test"_ and _"X_ _train"_,respectively. When Dealing in R programming, we first need to read two _.txt_ files.
+Since the test data,the training data, the participant ID and acitivityNumber(stored in "subject_train" and "y_train",respectively for train data and "subject_test" and "x_train" respectively for test data) are separated into four different files in the original files, which are named as "X_test" and "X_train",respectively. When Dealing in R programming, we first need to read four _.txt_ files.
 Using the key function _read.table()_. We should pay attention to what is the separated symbol in the original files, since it is an important parameter in _read.table()_ function.
 
 After reading these two original files into different data.frames, we need to combine these data.frames together by using the commond _rbind()_ function and finally we get the training data, the test data, the participant ID and their activity number together.
