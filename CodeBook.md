@@ -97,5 +97,15 @@ Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should 
 The preferred form for variable names is all lower case letters and words separated with dots (variable.name), but variableName is also accepted;
 function names have initial capital letters and no dots (FunctionName); constants are named like functions but with an initial k.
 
-* variable.name is preferred, variableName is accepted  GOOD: avg.clicks
-  
+* variable.name is preferred, variableName is accepted
+
+GOOD: avg.clicks
+
+OK: avgClicks
+
+BAD: avg_Clicks
+
+##Create a tidy data set with average of aech variable for each activity and each subject
+One easy way to solve such problem is to use _data.table_ rather than _data.frame_. The tutorial of _data.table_ can be found [here](http://cran.r-project.org/web/packages/data.table/data.table.pdf). After using function _setkey()_ and _dcast()_ function,
+we finally get the tidy data set, where the number of row is **180** and the number of column is **68**.
+
