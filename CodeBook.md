@@ -11,7 +11,7 @@ The subject and activity names in tidy data is named below:
 * activityName:  Six class labels with their activity names ("Walking,Walking_Upstairs,Walking_Downstairs,Sitting,Standing,Laying")
 
 ##Combining the test data and the training data together
-Since the test data,the training data, the participant ID and acitivityNumber(stored in _"subject_train"_and_"y_train_",respectively for train data and _"subject_test"_and_"x_train"_respectively for test data) are separated into two different files in the original files, which are named as _"X_test"_ and _"X_train"_,respectively. When Dealing in R programming, we first need to read two _txt_ files.
+Since the test data,the training data, the participant ID and acitivityNumber(stored in _"subject_ _train"_and_"y_ _train_",respectively for train data and _"subject_ _test"_and_"x_ _train"_respectively for test data) are separated into two different files in the original files, which are named as _"X_ _test"_ and _"X_ _train"_,respectively. When Dealing in R programming, we first need to read two _.txt_ files.
 Using the key function _read.table()_. We should pay attention to what is the separated symbol in the original files, since it is an important parameter in _read.table()_ function.
 
 After reading these two original files into different data.frames, we need to combine these data.frames together by using the commond _rbind()_ function and finally we get the training data, the test data, the participant ID and their activity number together.
@@ -85,7 +85,7 @@ The key extract command needs to use _grep()_ function. After using it, we can g
 * fBodyBodyGyroJerkMag-mean()
 * fBodyBodyGyroJerkMag-std()
 
-##Construct the link between the combined data with one original data defined some activity labels
+##Constructing the link between the combined data with one original data defined some activity labels
 We know that the relation of activity number and activity name is stored in the original file _"activity_labels.txt"_.
 We could construct the link between the combined data with one original data defined some activity labels by using the funcion _merge()_.
  
@@ -95,9 +95,9 @@ Of course, we can also learn something from [Google's R Style Guide](https://goo
 
 Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should be named according to the following conventions. 
 The preferred form for variable names is all lower case letters and words separated with dots (variable.name), but variableName is also accepted;
-function names have initial capital letters and no dots (FunctionName); constants are named like functions but with an initial k.
+function names have initial capital letters and no dots (FunctionName); constants are named like functions but with an initial k. Here are some examples.
 
-* variable.name is preferred, variableName is accepted
+variable.name is preferred, variableName is accepted
 
 GOOD: avg.clicks
 
@@ -105,7 +105,7 @@ OK: avgClicks
 
 BAD: avg_Clicks
 
-##Create a tidy data set with average of aech variable for each activity and each subject
+##Creating a tidy data set with average of aech variable for each activity and each subject
 One easy way to solve such problem is to use _data.table_ rather than _data.frame_. The tutorial of _data.table_ can be found [here](http://cran.r-project.org/web/packages/data.table/data.table.pdf). After using function _setkey()_ and _dcast()_ function,
 we finally get the tidy data set, where the number of row is **180** and the number of column is **68**.
 
