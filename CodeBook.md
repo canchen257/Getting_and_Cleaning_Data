@@ -91,5 +91,11 @@ We could construct the link between the combined data with one original data def
  
 ##Labelling the data set with descriptive variable names.
 According to the contents about some rules learnt from this course, for example, we can replace "-" with "." in original name. The important function is _sub()_ or _gsub()_.
-Of course, we can also learn something from
-Roses are <span style="color:red">red</span> 
+Of course, we can also learn something from [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml). Some rules are written below.
+
+Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should be named according to the following conventions. 
+The preferred form for variable names is all lower case letters and words separated with dots (variable.name), but variableName is also accepted;
+function names have initial capital letters and no dots (FunctionName); constants are named like functions but with an initial k.
+
+* variable.name is preferred, variableName is accepted  GOOD: avg.clicks
+  
