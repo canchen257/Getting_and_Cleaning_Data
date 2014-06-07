@@ -10,13 +10,13 @@ The subject and activity names in tidy data is named below:
 * subject: The participant ID (1-30)
 * activityName:  Six class labels with their activity names ("Walking,Walking_Upstairs,Walking_Downstairs,Sitting,Standing,Laying")
 
-##Combine the test data and the training data together
-Since the test data and the training data are separated into two different files in the original files, which are named as _"X_test"_ and _"X_train"_,respectively. When Dealing in R programming, we first need to read two _txt_ files.
+##Combining the test data and the training data together
+Since the test data,the training data, the participant ID and acitivityNumber(stored in _"subject_train"_and_"y_train_",respectively for train data and _"subject_test"_and_"x_train"_respectively for test data) are separated into two different files in the original files, which are named as _"X_test"_ and _"X_train"_,respectively. When Dealing in R programming, we first need to read two _txt_ files.
 Using the key function _read.table()_. We should pay attention to what is the separated symbol in the original files, since it is an important parameter in _read.table()_ function.
 
-After reading these two original files into two different data.frames, we need to combine these data.frames together by using the commond _rbind()_ function and finally we get the training data and test data together.
+After reading these two original files into different data.frames, we need to combine these data.frames together by using the commond _rbind()_ function and finally we get the training data, the test data, the participant ID and their activity number together.
 
-##Extracted the measuresments on the mean and standard deviation from original data set
+##Extracting the measuresments on the mean and standard deviation from original data set
 The key extract command needs to use _grep()_ function. After using it, we can get the specific measurement from the above data. The measurements we need are listed below.
 * tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
@@ -85,3 +85,11 @@ The key extract command needs to use _grep()_ function. After using it, we can g
 * fBodyBodyGyroJerkMag-mean()
 * fBodyBodyGyroJerkMag-std()
 
+##Construct the link between the combined data with one original data defined some activity labels
+We know that the relation of activity number and activity name is stored in the original file _"activity_labels.txt"_.
+We could construct the link between the combined data with one original data defined some activity labels by using the funcion _merge()_.
+ 
+##Labelling the data set with descriptive variable names.
+According to the contents about some rules learnt from this course, for example, we can replace "-" with "." in original name. The important function is _sub()_ or _gsub()_.
+Of course, we can also learn something from
+Roses are <span style="color:red">red</span> 
