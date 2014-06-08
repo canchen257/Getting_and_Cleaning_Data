@@ -17,7 +17,7 @@ This file records the R code to get the tidy data.
 This file describes the variables, the data, and any transformations or work that I perform to clean up the data.
 
 ####tidydata.csv
-The number of row is **180** and the number of column is **68**. It describes the average of each variables (mean and standard deviation) for each activity and each subject. The column names of this tidy data is below:
+The number of row is **180** and the number of column is **68**. It describes the average of each variables (mean and standard deviation) for each activity and each subject. The column names of this tidy data are below:
 *	subject
 *	activityName
 *	fBodyAcc.meanX
@@ -89,6 +89,7 @@ The number of row is **180** and the number of column is **68**. It describes th
 
 ##Process
 The following steps explain how I get the final tidy data set from the original data.
+
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 3. Uses descriptive activity names to name the activities in the data set
@@ -103,12 +104,13 @@ I list some important links which help me finishing this project successfully.
 [How to use _grep()_ function correctly?](http://stackoverflow.com/questions/4397876/how-can-i-use-grep-with-parameters-in-r)
 
 [R regular expression](http://www.endmemo.com/program/R/grep.php). This demo tells us how to use _grep_ and _sub_ functions. At the same time, it shows **regular expression syntax** in details.
-[R grepl Function](http://www.endmemo.com/program/R/grepl.php)
+[R grepl Function](http://www.endmemo.com/program/R/grepl.php) is explained here.
 
 [How to use _setkey()_ in data.table?](http://www.inside-r.org/packages/cran/data.table/docs/key) and [Using setkey with a column name variable](http://stackoverflow.com/questions/16346966/data-table-using-setkey-with-a-column-name-variable) 
-[Deal with the error:some columns are not in the data.table when using _setkey_](http://stackoverflow.com/questions/23471316/r-data-table-setkey-error-some-columns-are-not-in-the-data-table)
 
-[The PDF file of data.table](http://cran.r-project.org/web/packages/data.table/data.table.pdf).
+How to [deal with the error:some columns are not in the data.table when using _setkey_](http://stackoverflow.com/questions/23471316/r-data-table-setkey-error-some-columns-are-not-in-the-data-table)
+
+[The PDF file of data.table](http://cran.r-project.org/web/packages/data.table/data.table.pdf) is here.
 
 
 
